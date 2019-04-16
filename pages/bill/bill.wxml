@@ -1,0 +1,29 @@
+<view>
+  <view class='user'>
+    <view class='user-img'>
+      <open-data id="userimg" type="userAvatarUrl"></open-data>
+    </view>
+    <view class='usertext'>
+      <open-data id="nickname" type="userNickName" lang="zh_CN"></open-data>
+      :152****1050
+    </view>
+  </view>
+
+  <view class='wallet'>
+    <icon class='iconfont icon-wallet'></icon>
+    我的钱包
+    <icon class='iconfont icon-jiantou'></icon>
+  </view>
+  <view class='card'>
+    <icon class='iconfont icon-card'></icon>
+    我的卡券
+    <icon class='iconfont icon-jiantou'></icon>
+  </view>
+  <view class='bill'>
+    <icon class='iconfont icon-bill'></icon>
+    我的订单
+    <icon class='iconfont icon-jiantou'></icon>
+
+</view>
+    <button class='change'>切换账号</button>
+</view>

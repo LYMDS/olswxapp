@@ -1,0 +1,60 @@
+@import "../../iconfont.wxss" ;
+.user{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.user-img{
+  margin-top: 80rpx;
+  justify-content: center;
+}
+.usertext{
+  margin-top: 20rpx;
+}
+.icon-wallet{
+  color: rgb(110, 116, 110);
+}
+.icon-card{
+  color: rgb(110, 116, 110);
+}
+.icon-bill{
+  color: rgb(110, 116, 110);
+}
+.wallet{
+  height: 80rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  border-bottom: 1px solid #ededed;
+}
+.card{
+  height: 80rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  border-bottom: 1px solid #ededed;
+}
+.bill{
+  height: 80rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  border-bottom: 1px solid #ededed;
+}
+.icon-jiantou{
+  position: absolute;
+  right: 30rpx;
+  font-size: 40rpx;
+  color: rgb(110, 116, 110);
+}
+.change{
+  width: 90%;
+  margin-top: 200rpx;
+}
+#userimg{
+  width: 185rpx;
+  height:185rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  text-align: center;
+  justify-content:middle;
+}

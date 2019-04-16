@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/mymap/mymap",
+    "pages/user_except/user_except",
+    "pages/bill/bill",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/map1/map1",
+    "pages/map/map"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "停车充电",
+    "navigationBarTextStyle":"black"
+  },
+  "permission":{
+    "scope.userLocation":{"desc":"我是你爸爸，赶紧给我点!"}
+  }
+}

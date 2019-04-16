@@ -1,0 +1,13 @@
+<view>
+  <view class='text'>短信登录</view> 
+  <view>
+    <view class='phone'>
+		  <input placeholder='请输入手机号' type='number' class='input-phone' bindinput='input1' maxlength='11'/>
+	  </view>
+    <view class='pass-number'>
+		  <input placeholder='请输入验证码' type='number' class='input-number' bindinput='input2' maxlength='6'/>
+	  </view>
+    <button class='upload' bindtap='getCode' disabled="{{ canIget }}">{{ time }}</button>
+    <button class='upload1' bindtap='login' disabled="{{ canIlogin }}">登录</button>
+  </view>
+</view>

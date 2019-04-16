@@ -1,0 +1,95 @@
+@import "../../iconfont.wxss";
+
+#boss{
+  display: flex;
+  flex-direction: column;
+}
+
+#small_boss{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#img_box{
+  margin-top: 5rpx;
+  margin-left: 5%;
+  width:90%;
+}
+
+.img{
+  height: 500rpx;
+  width: 675rpx;
+}
+
+#text1{
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+}
+
+#text2{
+  position: absolute;
+  top: 300rpx;
+  left: 50rpx;
+}
+
+#text3{
+  margin-left: 5%;
+}
+
+#text4{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.b10{
+  height: 100rpx;
+  width: 150rpx;
+}
+
+#text5{
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 200rpx;
+  width: 90%;
+}
+
+#text6{
+  width: 40%;
+  margin-left: 30%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#bottom{
+  height: 150rpx;
+  width: 100%;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  
+}
+
+#how{
+  margin-left: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#charge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#charge_button{
+  margin-right: 50rpx;
+  height: 100rpx;
+  width: 150rpx;
+  background-color: green;
+}

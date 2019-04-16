@@ -1,0 +1,133 @@
+/**index.wxss**/
+@import "../../iconfont.wxss" ;
+
+
+.number{
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 8%;
+  height: 100rpx;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-bottom: ipx solid #ededed;
+  border-top: 1px solid #ededed;
+  border-radius:20rpx;
+  padding-bottom: 5px;
+  width: 90%;
+  align-items: center;
+}
+
+.kujinumber{
+  display: flex;
+  height: 100%;
+  width: 265rpx;
+  line-height: 100rpx;/*文字行高*/
+  margin-left: 20px;
+}
+
+.input-number{
+  height: 100%;
+  width: 250rpx;
+}
+
+.input-content{
+  display: flex;
+  height: 100%;
+  width: 170px;
+}
+
+.icon-sao {
+  font-size: 40px;
+  font-style: normal;
+  position: absolute;
+  right: 10rpx;
+  }
+
+.yichang{
+  font-size: 30rpx;
+  color: #afa5a5;
+  margin-left: 30rpx;
+}
+
+.xuanze1{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #afa5a5;
+  border-top: 1px solid #afa5a5;
+  height: 80rpx;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  margin-left: 50rpx;
+}
+
+.xuanze2{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #afa5a5;
+  height: 80rpx;
+  font-size: 35rpx;
+  margin-left: 50rpx;
+}
+
+.xuanze3{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #afa5a5;
+  height: 80rpx;
+  font-size: 35rpx;
+  margin-left: 50rpx;
+}
+
+
+.yichangk{
+  position: absolute;
+  top:50%;
+  height:20%;
+  width:90%;
+}
+
+
+.wenbenkuang{
+  border-bottom: 1px solid #afa5a5;
+  border-top: 1px solid #afa5a5;
+  height: 150rpx;
+  width: 100%;
+}
+
+
+.tijiaok
+{
+  background-color:rgb(14, 179, 14);
+  height: 100rpx;
+  width: 90%;
+  font-size: 40rpx;
+  line-height: 100rpx;/*文字行高*/
+  color: #fff;
+  margin-top: 150rpx;
+}
+
+
+.qita{
+  font-size: 40rpx;
+  color: rgb(86, 112, 226);
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+
+.circle{
+  margin-left: 475rpx;
+}
+
+.box2{
+  position: absolute;
+  top:20%;
+}
+
+.box3{
+  position: absolute;
+  top:65%;
+  height: 20%;
+  width: 100%;
+
+}

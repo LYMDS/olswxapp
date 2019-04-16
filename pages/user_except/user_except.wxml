@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+  <view class='number'>
+    <view class='kujinumber'>当前机库编号：</view> 
+    <view class='input-content'>
+      <input class='input-number' type='number'></input>
+      <icon class="iconfont icon-sao"></icon>
+    </view>
+    <icon type='&#xe6fe;'></icon>
+  </view>
+
+  <view class="box2">
+    <text class='yichang'>请选择异常类型</text>
+	
+    <view class='xuanze1'>
+      库机故障<icon class='circle' type='success_no_circle' size='20px'/>
+	</view>
+	
+    <view class='xuanze2'>
+      车辆损伤 <icon class='circle' type='success_no_circle' size='20px'/>
+	</view>
+	
+    <view class='xuanze3'>
+      其他异常 <icon class='circle' type='success_no_circle' size='20px'/>
+	</view>
+  </view>
+
+  <view class='yichangk'>
+    <text class='yichang'>请描述异常</text>
+    <textarea class='wenbenkuang' placeholder='请输入文本' auto-focus=''></textarea>
+  </view>
+<view class="box3">
+  <button class='tijiaok'>提交</button>
+
+  <view class='qita'>维保巡查</view>
+</view>
+
+

@@ -1,0 +1,1 @@
+<image src="../../img/1.jpg" class="addr-image" bindtap="mapNavigation" data-addr="{{classdata.address}}"></image>

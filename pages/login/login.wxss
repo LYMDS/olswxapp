@@ -1,0 +1,47 @@
+.text{
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+.phone{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #ededed;
+  margin-top: 60rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.pass-number{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #ededed;
+  margin-top: 60rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.upload{
+  margin-top: 50rpx;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.upload1{
+  margin-top: 50rpx;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(14, 179, 14);
+  color: #fff;
+}
+.input-phone{
+  width: 90%;
+  margin-left: 50rpx;
+}
+.input-number{
+   width: 90%;
+  margin-left: 50rpx;
+}

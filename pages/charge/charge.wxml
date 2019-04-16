@@ -1,0 +1,59 @@
+<view id = "boss">
+<view id='img_box'>
+  
+  <image class="img" src="../../img/12.jpg"></image>
+ 
+  
+  <view id="text1">
+    <view>
+      欧莱丝存车
+    </view>
+  </view>
+
+  <view id ="text2">
+    <text>
+      会员共享 存车充电 智能便捷
+      空位寄存 节点几重 扫码己去
+    </text>
+  </view>
+</view>
+
+<view id="text3">
+  <view>
+    请选择充值金额：
+  </view>
+</view>
+
+<view id = "text4">
+  <button class="b10" bindtap='change_num' data-num="10">10元</button>
+  <button class="b10" bindtap='change_num' data-num="20">20元</button>
+  <button class="b10" bindtap='change_num' data-num="30">30元</button>
+</view>
+
+<view id="text5">
+  <text>
+    fsihsosdgddhsigjldjighsohgdgk
+    jxdhoghghlsdi
+  </text>
+</view>
+</view>
+
+<view id="small_boss">
+<view id = "text6">
+  <text>查看钱包记录</text>
+</view>
+
+<view id = "bottom">
+
+  <view id = "how">
+    <view>
+      {{ money }}元
+    </view>
+  </view>
+
+  <view id="charge">
+    <button id="charge_button">充值</button>
+  </view>
+
+</view>
+</view>

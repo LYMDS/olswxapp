@@ -1,0 +1,11 @@
+<text class="user-motto">{{motto}}</text>
+<text bindtap="tryfun">\n请求调试</text>
+<text bindtap='test'>\nAPI调用测试口</text>
+<text bindtap='login_page'>\n登录</text>
+<text bindtap='calculate'>\n回答我</text>
+<text>\n{{ result }}</text>
+<view><open-data id="userimg" type="userAvatarUrl"></open-data></view>
+<view><open-data id="nickname" type="userNickName" lang="zh_CN"></open-data></view>
+<text bindtap='choose'>选择图片显示</text>
+<image wx:for="{{ path }}" wx:key="*this" bindtap='del' src="{{ item }}" id="{{ index }}" class="readypost"></image>
+<button bindtap='sendform'>提交</button>

@@ -1,0 +1,91 @@
+@import "../../iconfont.wxss" ;
+.mapside {
+  width:100%;
+  height:90%;
+  
+}
+
+page{
+  width:100%;
+  height:100%;
+  background-color:#99d1d8 
+}
+
+#scancode{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#97d2d6; 
+  color: white
+}
+
+.iconfix{
+  display: flex;
+  width : 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30rpx;
+  position: absolute;
+  bottom: 300rpx;
+  border-radius: 50%;
+}
+
+.icontip{
+  display: flex;
+  width : 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30rpx;
+  position: absolute;
+  bottom: 200rpx;
+  border-radius: 50%;
+}
+
+.iconposition{
+  display: flex;
+  width : 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30rpx;
+  position: absolute;
+  bottom: 100rpx;
+  border-radius: 50%;
+}
+
+#user_box{
+  display: flex;
+  width : 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0rpx;
+  bottom: 150rpx;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+#user_img{
+  width:100%;
+  height: 100%;
+}
+
+
+
+#fill{
+  width : 50rpx;
+  height: 100rpx;
+  position: absolute;
+  background-color: white;
+  right: 0rpx;
+  bottom: 150rpx;
+}
