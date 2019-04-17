@@ -1,0 +1,29 @@
+#side1{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 180rpx;
+  width:24%;
+  margin-left: 5%;
+  font-size: 20rpx;
+}
+
+
+.garage_frame{
+  position: absolute;
+  height:100%;
+  width:100%;
+}
+
+.car{
+  position: absolute;
+  bottom: 10%;
+  height: 40%;
+  width: 60%;
+}
+
+.car_num{
+  position: absolute;
+  top: 20%;
+}

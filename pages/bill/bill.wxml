@@ -25,5 +25,5 @@
     <icon class='iconfont icon-jiantou'></icon>
 
 </view>
-    <button class='change'>切换账号</button>
+    <button class='change' bindtap="to_login">切换账号</button>
 </view>

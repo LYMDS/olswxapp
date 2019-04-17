@@ -11,5 +11,11 @@ Page({
     wx.navigateTo({
       url: '../charge/charge',
     })
-  }
+  },
+
+  to_login:function(){
+    wx.navigateTo({
+      url: '../login/login',
+    })
+  },
 })

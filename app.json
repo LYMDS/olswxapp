@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/take_car/take_car",
     "pages/mymap/mymap",
     "pages/user_exc/user_exc",
     "pages/user_except/user_except",

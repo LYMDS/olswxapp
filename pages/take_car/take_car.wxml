@@ -1,0 +1,5 @@
+<view id="side1">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image class="car" src="../../img/10.png"></image>
+  <text class="car_num">粤M 56145</text>
+</view>
