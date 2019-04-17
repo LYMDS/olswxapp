@@ -1,18 +1,15 @@
 <map class='mapside' longitude="{{longitude}}" latitude="{{latitude}}" scale="28" markers="{{ markers }}" show-location = "true" bindmarkertap="map_init">
 
-<cover-image src='../../image/tip.png' class='icontip'></cover-image>
-<cover-image src='../../image/fix.png' class='iconfix'></cover-image>
+<cover-image src='../../image/tip.png' class='icontip' bindtap='to_tip'></cover-image>
+<cover-image src='../../image/fix.png' class='iconfix' bindtap='to_except'></cover-image>
 <cover-image src='../../image/position.png' class='iconposition' bindtap="user_side"></cover-image>
 
 <cover-view id='fill'></cover-view>
-<cover-view id='user_box'>
+<cover-view id='user_box' bindtap='to_personal'>
   <cover-image id='user_img' src='../../img/user.png'></cover-image>
 </cover-view>
 
 </map>
-
-
-
 
 <view id="scancode" bindtap='scan_code'>
   <view>

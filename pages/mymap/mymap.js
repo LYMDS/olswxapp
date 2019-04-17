@@ -16,6 +16,15 @@ Page({
   },
 
   onLoad:function(){
+    var stu = wx.getStorageSync("login_state")
+    var user = wx.getStorageSync("user_num")
+    if (stu == null || stu == false || user == null) {
+      wx.redirectTo({
+        url: '../login/login'
+      })
+    }
+    else { console.log("在index页面加载时登录成功") }
+
     var that = this
     wx.request({
       url: app.globalData.serverURL + '/map_init',
@@ -98,6 +107,23 @@ Page({
           longitude: res.longitude
         })
       },
+    })
+  },
+
+
+  to_personal: function(){
+    wx.navigateTo({
+      url: '../bill/bill',
+    })
+  },
+  to_except: function(){
+    wx.navigateTo({
+      url: '../user_exc/user_exc',
+    })
+  },
+  to_tip: function(){
+    wx.navigateTo({
+      url: '../tip/tip',
     })
   }
 

@@ -1,0 +1,67 @@
+<view id='input_button'>
+  
+  <view id='guide'>
+    <view>
+      当前机库编号:
+    </view>
+  </view>
+  
+  <view id='garage_num'>
+      <input maxlength='9' placeholder="{{ gar_num }}" bindinput='input1'></input>
+  </view>
+
+  <view id='scancode' bindtap="scan_code">
+    <icon class="iconfont icon-sao"></icon>
+  </view>
+
+</view>
+
+<view class='tip'>
+  <view>
+    请选择库机的异常类型
+  </view>
+</view>
+
+<view id='type_box'>
+
+  <view class='type' hover='true' style="background-color:{{ color1 }}" bindtap='type' data-value='1#'>
+    <view>
+      库机故障
+    </view>
+  </view>
+
+  <view class='type' hover='true' style="background-color:{{ color2 }}" bindtap='type' data-value='2#'>
+    <view>
+      车辆损伤
+    </view>
+  </view>
+
+  <view class='type' hover='true' style="background-color:{{ color3 }}" bindtap='type' data-value='3#'>
+    <view>
+      其他
+    </view>
+  </view>
+
+</view>
+
+<view class='tip'>
+  <view>
+    请描述异常
+  </view>
+</view>
+
+<textarea id='except_text' placeholder='请输入文本' maxlength='200' bindinput='input2'></textarea>
+
+<view id='choose_photo' bindtap='choose'>
+  <view>
+    照片
+  </view>
+</view>
+
+<view id='img_box'>
+  <image wx:for="{{ path }}" wx:key="*this" bindtap='del' src="{{ item }}" id="{{ index }}" class="readypost"></image>
+</view>
+
+<button id='button_box' bindtap='sendform'>
+  提交
+</button>

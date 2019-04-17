@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/mymap/mymap",
+    "pages/user_exc/user_exc",
     "pages/user_except/user_except",
     "pages/bill/bill",
     "pages/index/index",
