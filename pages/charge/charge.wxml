@@ -1,4 +1,3 @@
-<view id = "boss">
 <view id='img_box'>
   
   <image class="img" src="../../img/12.jpg"></image>
@@ -36,9 +35,7 @@
     jxdhoghghlsdi
   </text>
 </view>
-</view>
 
-<view id="small_boss">
 <view id = "text6">
   <text>查看钱包记录</text>
 </view>
@@ -55,5 +52,4 @@
     <button id="charge_button">充值</button>
   </view>
 
-</view>
 </view>

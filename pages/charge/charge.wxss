@@ -1,14 +1,6 @@
 @import "../../iconfont.wxss";
 
-#boss{
-  display: flex;
-  flex-direction: column;
-}
 
-#small_boss{
-  display: flex;
-  flex-direction: column-reverse;
-}
 
 #img_box{
   margin-top: 5rpx;

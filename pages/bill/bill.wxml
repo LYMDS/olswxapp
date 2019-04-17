@@ -9,7 +9,7 @@
     </view>
   </view>
 
-  <view class='wallet'>
+  <view class='wallet' bindtap='to_wallet'>
     <icon class='iconfont icon-wallet'></icon>
     我的钱包
     <icon class='iconfont icon-jiantou'></icon>
