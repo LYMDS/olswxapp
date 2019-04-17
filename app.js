@@ -28,7 +28,7 @@ App({
 
   globalData: {
     userInfo: null,
-    serverURL: "http://wii25d.natappfree.cc"// https://lym.ngrok.xiaomiqiu.cn  http://qa9r3k.natappfree.cc
+    serverURL: "https://lym.ngrok.xiaomiqiu.cn"// https://lym.ngrok.xiaomiqiu.cn  http://qa9r3k.natappfree.cc
   },
 
   
