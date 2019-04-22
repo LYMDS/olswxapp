@@ -15,7 +15,7 @@ Page({
     latitude: 25.1556916162, 
     longitude: 116.7250505686,
     phone:'15217451050',
-
+    bill :[],
   },
 
 
@@ -165,6 +165,30 @@ Page({
             }
           }
         });
+      },
+
+
+      get_bill: function(){
+        var that = this;
+        wx.request({
+          url: 'http://120.77.156.184/information',//https://lym.ngrok.xiaomiqiu.cn/connect
+          data: {
+            user_num: 1
+          },
+          success: res => {
+            if (res.statusCode == 200) {
+              var bill = res.data.all
+              console.log(res)
+              for ( let i=0 ; i<bill.length ; i++ ){
+                bill[i][0] = bill[i][0].replace("T", " ")
+              };
+              that.setData({
+                bill: res.data.all
+              })
+              
+            }
+          }
+        })
       },
 
       test: function(){
