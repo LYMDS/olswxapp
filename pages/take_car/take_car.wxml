@@ -1,105 +1,160 @@
-<view id="side11" class="car_box">
+<view id="side15" class="car_box" wx:if="{{ gar_data[15].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s11[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s11[0] }}</text>
-  <image wx:if="{{ gar_data.s11[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">11号</text>
+  <image wx:if="{{ gar_data[15][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[15][4] }}</text>
+  <image wx:if="{{ gar_data[15][2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[15][0] }}号</text>
 </view>
 
-<view id="side12" class="car_box">
+<view id="side16" class="car_box" wx:if="{{ gar_data[16].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s12[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s12[0] }}</text>
+  <image wx:if="{{ gar_data[16][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[16][4] }}</text>
   <image wx:if="{{ gar_data.s12[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">12号</text>
+  <text class="car_side">{{ gar_data[16][0] }}号</text>
 </view>
 
-<view id="side13" class="car_box">
+<view id="side17" class="car_box" wx:if="{{ gar_data[17].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s13[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s13[0] }}</text>
+  <image wx:if="{{ gar_data[17][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[17][4] }}</text>
   <image wx:if="{{ gar_data.s13[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">12号</text>
+  <text class="car_side">{{ gar_data[17][0] }}号</text>
 </view>
 
-<view id="side9" class="car_box">
+
+
+
+
+<view id="side12" class="car_box" wx:if="{{ gar_data[12].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s9[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s9[0] }}</text>
+  <image wx:if="{{ gar_data[12][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[12][4] }}</text>
   <image wx:if="{{ gar_data.s9[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">9号</text>
+  <text class="car_side">{{ gar_data[12][0] }}号</text>
 </view>
 
-<view id="side10" class="car_box">
+<view id="side13" class="car_box" wx:if="{{ gar_data[13].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s10[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s10[0] }}</text>
+  <image wx:if="{{ gar_data[13][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[13][4] }}</text>
   <image wx:if="{{ gar_data.s10[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">10号</text>
+  <text class="car_side">{{ gar_data[13][0] }}号</text>
 </view>
 
-<view id="side7" class="car_box">
+<view id="side14" class="car_box" wx:if="{{ gar_data[14].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s7[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s7[0] }}</text>
+  <image wx:if="{{ gar_data[14][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[14][4] }}</text>
   <image wx:if="{{ gar_data.s7[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">7号</text>
+  <text class="car_side">{{ gar_data[14][0] }}号</text>
 </view>
 
 
-<view id="side8" class="car_box" bindtap='try_to'>
+
+
+<view id="side9" class="car_box" wx:if="{{ gar_data[9].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s8[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s8[0] }}</text>
+  <image wx:if="{{ gar_data[9][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[9][4] }}</text>
   <image wx:if="{{ gar_data.s8[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">8号</text>
+  <text class="car_side">{{ gar_data[9][0] }}号</text>
 </view>
 
-
-<view id="side5" class="car_box">
+<view id="side10" class="car_box" wx:if="{{ gar_data[10].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s5[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s5[0] }}</text>
+  <image wx:if="{{ gar_data[10][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[10][4] }}</text>
   <image wx:if="{{ gar_data.s5[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">5号</text>
+  <text class="car_side">{{ gar_data[10][0] }}号</text>
 </view>
 
-<view id="side6" class="car_box">
+<view id="side11" class="car_box" wx:if="{{ gar_data[11].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s6[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s6[0] }}</text>
+  <image wx:if="{{ gar_data[11][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[11][4] }}</text>
   <image wx:if="{{ gar_data.s6[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">6号</text>
+  <text class="car_side">{{ gar_data[11][0] }}号</text>
 </view>
 
-<view id="side3" class="car_box">
+
+
+
+<view id="side6" class="car_box" wx:if="{{ gar_data[6].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s3[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s3[0] }}</text>
+  <image wx:if="{{ gar_data[6][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[6][4] }}</text>
   <image wx:if="{{ gar_data.s3[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">3号</text>
+  <text class="car_side">{{ gar_data[6][0] }}号</text>
 </view>
 
-<view id="side4" class="car_box">
+<view id="side7" class="car_box" wx:if="{{ gar_data[7].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s4[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s4[0] }}</text>
+  <image wx:if="{{ gar_data[7][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[7][4] }}</text>
   <image wx:if="{{ gar_data.s4[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">4号</text>
+  <text class="car_side">{{ gar_data[7][0] }}号</text>
 </view>
 
-<view id="side1" class="car_box">
+<view id="side8" class="car_box" wx:if="{{ gar_data[8].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s1[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s1[0] }}</text>
+  <image wx:if="{{ gar_data[8][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[8][4] }}</text>
   <image wx:if="{{ gar_data.s1[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">1号</text>
+  <text class="car_side">{{ gar_data[8][0] }}号</text>
 </view>
 
-<view id="side2" class="car_box">
+
+
+
+<view id="side3" class="car_box" wx:if="{{ gar_data[3].length > 1 }}">
   <image class="garage_frame" src="../../img/11.png"></image>
-  <image wx:if="{{ gar_data.s2[1] }}" class="car" src="../../img/10.png"></image>
-  <text class="car_num">{{ gar_data.s2[0] }}</text>
+  <image wx:if="{{ gar_data[3][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[3][4] }}</text>
   <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
-  <text class="car_side">2号</text>
+  <text class="car_side">{{ gar_data[3][0] }}号</text>
 </view>
+
+<view id="side4" class="car_box" wx:if="{{ gar_data[4].length > 1 }}">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image wx:if="{{ gar_data[4][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[4][4] }}</text>
+  <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[4][0] }}号</text>
+</view>
+
+<view id="side5" class="car_box" wx:if="{{ gar_data[5].length > 1 }}">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image wx:if="{{ gar_data[5][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[5][4] }}</text>
+  <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[5][0] }}号</text>
+</view>
+
+
+
+
+<view id="side0" class="car_box"wx:if="{{ gar_data[0].length > 1 }}">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image wx:if="{{ gar_data[0][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[0][4] }}</text>
+  <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[0][0] }}号</text>
+</view>
+
+<view id="side1" class="car_box" wx:if="{{ gar_data[1].length > 1 }}">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image wx:if="{{ gar_data[1][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[1][4] }}</text>
+  <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[1][0] }}号</text>
+</view>
+
+<view id="side2" class="car_box" wx:if="{{ gar_data[2].length > 1 }}">
+  <image class="garage_frame" src="../../img/11.png"></image>
+  <image wx:if="{{ gar_data[2][1] }}" class="car" src="../../img/10.png"></image>
+  <text class="car_num">{{ gar_data[2][4] }}</text>
+  <image wx:if="{{ gar_data.s2[2] }}" class="battery" src="../../img/charge.png"></image>
+  <text class="car_side">{{ gar_data[2][0] }}号</text>
+</view>
+

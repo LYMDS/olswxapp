@@ -18,4 +18,10 @@ Page({
       url: '../login/login',
     })
   },
+
+  to_mybill:function(){
+    wx.navigateTo({
+      url: '../record/record',
+    })
+  }
 })

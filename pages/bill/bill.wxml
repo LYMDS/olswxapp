@@ -19,7 +19,7 @@
     我的卡券
     <icon class='iconfont icon-jiantou'></icon>
   </view>
-  <view class='bill'>
+  <view class='bill' bindtap='to_mybill'>
     <icon class='iconfont icon-bill'></icon>
     我的账单
     <icon class='iconfont icon-jiantou'></icon>

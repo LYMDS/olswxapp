@@ -1,3 +1,4 @@
+<!--
 <text class="user-motto">{{motto}}</text>
 <text bindtap="tryfun">\n请求调试</text>
 <text bindtap='test'>\nAPI调用测试口</text>
@@ -11,7 +12,7 @@
 <button bindtap='sendform'>提交</button>
 <button bindtap='get_bill'>获取用户账单数据</button>
 
-<view wx:for="{{ bill }}" wx:for-index="num" wx:for-item="A_bill">
+<block wx:for="{{ bill }}" wx:for-index="num" wx:for-item="A_bill">
 
   <text wx:if="{{ A_bill.length == 5 }}">
     {{ A_bill[0] }},{{ A_bill[1] }},{{ A_bill[2] }},{{ A_bill[3] }},{{ A_bill[4] }}
@@ -21,4 +22,9 @@
     {{ A_bill[0] }},{{ A_bill[1] }},{{ A_bill[2] }}
   </text>
 
-</view>
+</block>
+-->
+
+<button bindtap='gar_msg'>车库信息测试</button>
+<button bindtap='get_img'>下载图片</button>
+

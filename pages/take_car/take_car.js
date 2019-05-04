@@ -3,7 +3,8 @@ const app = getApp();
 Page({
   data: {
     choose_car: "",
-    gar_data: {
+    gar_data: [],
+    /*{
       's1': ["粤M 11441", 1, 1],
       's2': ["", 0, 0],
       's3': ["粤P 14126", 1, 1],
@@ -17,14 +18,30 @@ Page({
       's11': ["粤J 57896", 1, 0],
       's12': ["粤M 546566", 1, 0],
       's13': ["粤R 546456", 1, 1],
+    },*/
+  },
+
+onLoad: function(){
+  var that = this;
+  wx.request({
+    url: app.globalData.serverURL + '/garage_msg/',
+    data: {
+      garage_code: 'gds100001'
     },
-  },
+    success: res => {
+      if (res.statusCode == 200) {
+        const list = res.data["gar_msg"];
+        that.setData({
+          gar_data: list
+        })
+      }
+    }
+  })
+},
 
-  onLoad: function(){},
 
-
-  try_to: function () {
-    console.log("dasdad")
-  },
+try_to: function () {
+  console.log("dasdad")
+},
 
 })

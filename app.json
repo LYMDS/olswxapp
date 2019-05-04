@@ -1,12 +1,12 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/take_car/take_car",
     "pages/mymap/mymap",
-
+    "pages/record/record",
     "pages/user_exc/user_exc",
     "pages/user_except/user_except",
     "pages/bill/bill",
-    "pages/index/index",
     "pages/login/login",
     "pages/map1/map1",
     "pages/map/map"

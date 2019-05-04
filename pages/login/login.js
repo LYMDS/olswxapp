@@ -27,7 +27,7 @@ Page({
           wx.setStorageSync("login_state", true)
           wx.setStorageSync("user_num", user_num)
           wx.redirectTo({
-            url: '../index/index'
+            url: '../mymap/mymap'
           })
 
         }

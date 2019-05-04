@@ -120,98 +120,119 @@ Page({
         })
       },
 
-      sendform:function(){
-        var that = this
-        var nowtime = util.formatTime(new Date())
-        console.log(nowtime)
-        wx.request({
-          url: app.globalData.serverURL + '/exception',
-          data: {
-            user_num : wx.getStorageSync('user_num'),
-            garage_code : 'gds100001',
-            type : '1*3*4*',
-            report : '有人告诉你，库机出问题了',
-            date_time:nowtime
-          },
-          success: function(res) {
-            if (res.statusCode == 200 && res.data['exist']) {
-              console.log('库机异常表提交成功！')
-              var nowtime=res.data['nowtime']
-              console.log(nowtime)
-              var path = that.data.path
-              for (let i = 0; i < path.length && path.length > 0 ; i++) {  //使用for循环基本是并发的
-                wx.uploadFile({
-                  url: app.globalData.serverURL + '/except_upload/',
-                  filePath: that.data.path[i],
-                  name: 'file',
-                  formData: {
-                    datetime: nowtime,
-                    user_num: wx.getStorageSync('user_num'),
-                    img_num: i
-                  },
-                  success: res => {
-                    console.log(i);  //返回的i值是散点型的，
-                    var turn = JSON.parse(res.data);
-                    console.log(turn["state"])
-                    console.log(res.data.trim())
-
-                  }
-                })
-
-              };
-              console.log('所有图片发送完毕')
-                
-              
-            }
-          }
-        });
+  sendform:function(){
+    var that = this
+    var nowtime = util.formatTime(new Date())
+    console.log(nowtime)
+    wx.request({
+      url: app.globalData.serverURL + '/exception',
+      data: {
+        user_num : wx.getStorageSync('user_num'),
+        garage_code : 'gds100001',
+        type : '1*3*4*',
+        report : '有人告诉你，库机出问题了',
+        date_time:nowtime
       },
+      success: function(res) {
+        if (res.statusCode == 200 && res.data['exist']) {
+          console.log('库机异常表提交成功！')
+          var nowtime=res.data['nowtime']
+          console.log(nowtime)
+          var path = that.data.path
+          for (let i = 0; i < path.length && path.length > 0 ; i++) {  //使用for循环基本是并发的
+            wx.uploadFile({
+              url: app.globalData.serverURL + '/except_upload/',
+              filePath: that.data.path[i],
+              name: 'file',
+              formData: {
+                datetime: nowtime,
+                user_num: wx.getStorageSync('user_num'),
+                img_num: i
+              },
+              success: res => {
+                console.log(i);  //返回的i值是散点型的，
+                var turn = JSON.parse(res.data);
+                console.log(turn["state"])
+                console.log(res.data.trim())
+
+              }
+            })
+
+          };
+          console.log('所有图片发送完毕')
+            
+          
+        }
+      }
+    });
+  },
 
 
-      get_bill: function(){
-        var that = this;
-        wx.request({
-          url: 'http://120.77.156.184/information',//https://lym.ngrok.xiaomiqiu.cn/connect
-          data: {
-            user_num: 1
-          },
-          success: res => {
-            if (res.statusCode == 200) {
-              var bill = res.data.all
-              console.log(res)
-              for ( let i=0 ; i<bill.length ; i++ ){
-                bill[i][0] = bill[i][0].replace("T", " ")
-              };
-              that.setData({
-                bill: res.data.all
-              })
-              
-            }
-          }
-        })
+  get_bill: function(){
+    var that = this;
+    wx.request({
+      url: app.globalData.serverURL+'/information',//https://lym.ngrok.xiaomiqiu.cn/connect
+      data: {
+        user_num: 1
       },
+      success: res => {
+        if (res.statusCode == 200) {
+          var bill = res.data.all
+          console.log(res)
+          for ( let i=0 ; i<bill.length ; i++ ){
+            bill[i][0] = bill[i][0].replace("T", " ")
+          };
+          that.setData({
+            bill: res.data.all
+          })
+          
+        }
+      }
+    })
+  },
 
-      test: function(){
-        wx.redirectTo({
-          url: '../login/login'
-        })
-        /*
-        wx.scanCode({//微信扫码功能
-          onlyFromCamera: false,//是否支持相册扫码
-          scanType: [],
-          success: function(res) {
-            console.log(res.result)
-            console.log(res.scanType)
-            console.log(res.charSet)//utf-8
-            console.log(res.path)
-          },
-          fail: function(res) {},
-          complete: function(res) {},
-        })*/
-
-
-        
+  gar_msg:function(){
+    wx.request({
+      url: app.globalData.serverURL + '/garage_msg/',
+      data: {
+        garage_code: 'gds100001'
       },
+      success: res => {
+        if (res.statusCode == 200) {
+          console.log(res)
+        }
+      }
+    })
+  },
+
+  test: function(){
+    wx.redirectTo({
+      url: '../login/login'
+    })
+    /*
+    wx.scanCode({//微信扫码功能
+      onlyFromCamera: false,//是否支持相册扫码
+      scanType: [],
+      success: function(res) {
+        console.log(res.result)
+        console.log(res.scanType)
+        console.log(res.charSet)//utf-8
+        console.log(res.path)
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })*/
+  },
+
+
+  get_img: function(){
+    wx.downloadFile({
+      url: app.globalData.serverURL + '/show_img/',
+      success:function(res){
+        console.log(res.tempFilePath)
+      }
+    })
+  },
     
 
 

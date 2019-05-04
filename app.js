@@ -24,7 +24,7 @@ App({
 
   globalData: {
     userInfo: null,
-    serverURL: "https://lym.ngrok.xiaomiqiu.cn"// https://lym.ngrok.xiaomiqiu.cn  http://qa9r3k.natappfree.cc
+    serverURL: "http://www.olswxapp.top"// https://lym.ngrok.xiaomiqiu.cn  http://qa9r3k.natappfree.cc
   },
 
   

@@ -6,7 +6,7 @@
   height: 180rpx;
   width:24%;
   font-size: 20rpx;
-  color: white;
+  color: black;
 }
 
 
@@ -25,7 +25,7 @@
 
 .car_num{
   position: absolute;
-  top: 20%;
+  top: 45%;
 }
 
 
@@ -38,47 +38,61 @@
 }
 
 .car_side{
-  color: black;
-  font-size: 150%;
+  color: white;
+  font-size: 30rpx;
+  position: absolute;
+  top: 17%;
 }
-
-#side11{
+/*-------------------------------------------------------*/
+#side15{
   margin-left: 5%;
 }
-#side12{
+#side16{
   margin-left: 35%;
 }
-#side13{
+#side17{
   margin-left: 65%;
 }
-
-#side9{
+/*-------------------------------------------------------*/
+#side12{
   margin-left: 5%;
   margin-top: 180rpx;
+}
+#side13{
+  margin-left: 35%;
+  margin-top: 180rpx;
+}
+#side14{
+  margin-left: 65%;
+  margin-top: 180rpx;
+}
+/*-------------------------------------------------------*/
+#side9{
+  margin-left: 5%;
+  margin-top: 360rpx;
 }
 #side10{
   margin-left: 35%;
-  margin-top: 180rpx;
-}
-
-#side7{
-  margin-left: 5%;
   margin-top: 360rpx;
+}
+#side11{
+  margin-left: 65%;
+  margin-top: 360rpx;
+}
+/*-------------------------------------------------------*/
+#side6{
+  margin-left: 5%;
+  margin-top: 540rpx;
+}
+#side7{
+  margin-left: 35%;
+  margin-top: 540rpx;
 }
 #side8{
-  margin-left: 35%;
-  margin-top: 360rpx;
-}
-
-#side5{
-  margin-left: 5%;
+  margin-left: 65%;
   margin-top: 540rpx;
 }
-#side6{
-  margin-left: 35%;
-  margin-top: 540rpx;
-}
-
+/*-------------------------------------------------------*/
 #side3{
   margin-left: 5%;
   margin-top: 720rpx;
@@ -87,16 +101,24 @@
   margin-left: 35%;
   margin-top: 720rpx;
 }
-
-#side1{
+#side5{
+  margin-left: 65%;
+  margin-top: 720rpx;
+}
+/*-------------------------------------------------------*/
+#side0{
   margin-left: 5%;
   margin-top: 900rpx;
 }
-#side2{
+#side1{
   margin-left: 35%;
   margin-top: 900rpx;
 }
-
+#side2{
+  margin-left: 65%;
+  margin-top: 900rpx;
+}
+/*-------------------------------------------------------*/
 
 
 page{
