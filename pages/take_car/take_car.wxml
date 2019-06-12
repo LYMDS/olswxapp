@@ -158,3 +158,20 @@
   <text class="car_side">{{ gar_data[2][0] }}号</text>
 </view>
 
+<view wx:if="{{ gar_data[0] == 1 }}" id="solid0" class='solid'>
+  <view class='dashed'>
+  </view>
+</view>
+
+<view wx:if="{{ gar_data[1] == 1 }}" id="solid1" class='solid'>
+  <view class='dashed'>
+  </view>
+</view>
+
+<view wx:if="{{ gar_data[2] == 1 }}" id="solid2" class='solid'>
+  <view class='dashed'>
+  </view>
+</view>
+
+<button>取车</button>
+

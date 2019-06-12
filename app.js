@@ -24,7 +24,8 @@ App({
 
   globalData: {
     userInfo: null,
-    serverURL: "http://www.olswxapp.top"// https://lym.ngrok.xiaomiqiu.cn  http://qa9r3k.natappfree.cc
+    garage_code: null,
+    serverURL: "http://120.77.156.184",
   },
 
   

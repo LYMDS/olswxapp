@@ -1,0 +1,46 @@
+<view class='money-content'>
+  <image src='../../img/35.png' id='img'></image>
+
+  <view id='group0'>
+    <icon class='iconfont icon-wallet'></icon>
+    <view id='less'>余额</view>
+  </view>
+  <view id='group1'>
+    <view id='money_sign'>￥</view>
+    <view class='money-number'>{{ money }}元</view>
+  </view>
+</view>
+
+
+<view class='charge-button'>
+  <view class='row1'>
+    <button style="border: 2px solid {{ color[0][0] }};background-color: {{ color[0][1] }};color: {{ color[0][2] }};" data-value='30' bindtap='choose'>30元</button>
+    <button style="border: 2px solid {{ color[1][0] }};background-color: {{ color[1][1] }};color: {{ color[1][2] }};" data-value='50' bindtap='choose'>50元</button>
+    <button style="border: 2px solid {{ color[2][0] }};background-color: {{ color[2][1] }};color: {{ color[2][2] }};" data-value='100' bindtap='choose'>100元</button>
+  </view>
+  <view class='row1'>
+    <button style="border: 2px solid {{ color[3][0] }};background-color: {{ color[3][1] }};color: {{ color[3][2] }};" data-value='200' bindtap='choose'>200元</button>
+    <button style="border: 2px solid {{ color[4][0] }};background-color: {{ color[4][1] }};color: {{ color[4][2] }};" data-value='300' bindtap='choose'>300元</button>
+    <button style="border: 2px solid {{ color[5][0] }};background-color: {{ color[5][1] }};color: {{ color[5][2] }};" data-value='set' bindtap='choose'>自定义</button>
+  </view>
+</view>
+
+
+<view id='drift' wx:if='{{ display }}'>
+  <view id='tip'>请输入指定金额:</view>
+  <view id='group2'>
+    <input maxlength='4' type='number' bindinput='input1' bindinput='input'></input>
+    <view id='yuan'>元</view>
+  </view>
+</view>
+
+<text id='tip_user'>
+　温馨提示：
+　　1.请仔细核对充值数额,充值后将无法退款
+　　2.为确保您取车无忧,请提前检查自己的剩余金额
+</text>
+
+<!-- <input placeholder='  请输入充值金额' class='input-money'></input> -->
+<view class='input-content'>
+  <view bindtap='charge'>充值</view>
+</view>

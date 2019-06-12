@@ -1,8 +1,10 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/take_car/take_car",
+  "pages": [
     "pages/mymap/mymap",
+    "pages/charge/charge",
+    "pages/take_car/take_car",
+    "pages/index/index",
+    "pages/carry/carry",
     "pages/record/record",
     "pages/user_exc/user_exc",
     "pages/user_except/user_except",
@@ -11,13 +13,16 @@
     "pages/map1/map1",
     "pages/map/map"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "停车充电",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "permission":{
-    "scope.userLocation":{"desc":"我是你爸爸，赶紧给我点!"}
-  }
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请求获取地理信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
 }

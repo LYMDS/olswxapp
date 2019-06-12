@@ -33,6 +33,7 @@ Page({
       },
       success: function(res) {
         var info =  res.data['garage_info']
+        console.log(info)
         var list = []
         for ( let i=0 ; i < info.length ; i+=1){
           var a = {
@@ -62,9 +63,6 @@ Page({
 
   },
 
-
-
-
   map_init :function(e){
     var x = this.data.markers[e.markerId].latitude
     var y = this.data.markers[e.markerId].longitude
@@ -85,12 +83,17 @@ Page({
   },
 
   scan_code: function(){
+    var that = this;
     wx.scanCode({
       onlyFromCamera: true,
       scanType: ['barCode', 'qrCode'],
       success: function(res) {
-        console.log(res)
-        //处理res数据即可
+        const code = res.path.slice(res.path.indexOf('=')+1)
+        console.log(code)
+        app.globalData.garage_code = code
+        wx.navigateTo({
+          url: '../take_car/take_car',
+        })
       },
       fail: function(res) {},
       complete: function(res) {},

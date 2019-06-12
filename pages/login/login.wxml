@@ -1,5 +1,5 @@
 <view>
-  <view class='text'>短信登录</view> 
+  <view class='text'>短信登录</view>
   <view>
     <view class='phone'>
 		  <input placeholder='请输入手机号' type='number' class='input-phone' bindinput='input1' maxlength='11'/>

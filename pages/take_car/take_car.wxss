@@ -119,7 +119,12 @@
   margin-top: 900rpx;
 }
 /*-------------------------------------------------------*/
-
+button{
+  width: 100%;
+  height: 90rpx;
+  position: absolute;
+  bottom: 0rpx;
+}
 
 page{
   position: static;
@@ -127,4 +132,38 @@ page{
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
+  background-color: #e2fff5;
+}
+
+.solid {
+  border-bottom-width: 10px;
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  height: 160rpx;
+  width: 180rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dashed {
+  border-left-style: dashed;
+  border-left-color: grey;
+  border-left-width: 3px;
+  width: 140rpx;
+  height: 180rpx;
+  border-right-style: dashed;
+  border-right-color: grey;
+  border-right-width: 3px;
+}
+#solid0{
+  margin-left: 5%;
+  margin-top: 900rpx;
+}
+#solid1{
+  margin-left: 35%;
+  margin-top: 900rpx;
+}
+#solid2{
+  margin-left: 65%;
+  margin-top: 900rpx;
 }
