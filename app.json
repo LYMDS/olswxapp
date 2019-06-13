@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/record/record",
     "pages/mymap/mymap",
-    "pages/charge/charge",
     "pages/take_car/take_car",
+    "pages/charge/charge",
     "pages/index/index",
     "pages/carry/carry",
-    "pages/record/record",
     "pages/user_exc/user_exc",
     "pages/user_except/user_except",
     "pages/bill/bill",

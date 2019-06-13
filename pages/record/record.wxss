@@ -1,69 +1,110 @@
-.reduce {
+.record{
   display: flex;
-  flex-direction: column;
-  line-height: 30rpx;
-  border: 1px solid rgb(245, 242, 242);
-  margin-top: 30rpx;
+  flex-flow: column wrap;
+  margin-left: 5%;
   width: 90%;
+  /* 最大的view,是一条记录的整体 */
 }
 
-.information {
-  display: flex;
-  flex-direction: row;
-  font-size: 50rpx;
-  height: 150rpx;
-  align-items: center;
-  background-color: rgb(233, 230, 230);
+.information{
+  position: relative;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+  /* 一条记录的第一行，简要行 */
+}
+
+.information:active{
+  position: relative;
+  height: 100rpx;
+  background-color: black;
+}
+
+.bgimg0{
+  height: 100rpx;
   width: 100%;
+  border-radius: 10rpx;
 }
 
 .timecontent{
-  margin-left: 50rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 20rpx;
+  color: white;
 }
 
 .reducecontent{
-  display: flex;
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  color: white;
 }
 
-
-
-.reduce-detail{
-  height: 400rpx
+/* .reduce-detail{
+  position: relative;
+  height: 300rpx;
+  border-top: 2px solid white;
+  overflow: hidden;
+  animation: down 500ms linear;
+  animation-direction: alternate;
+} */
+.open{
+  animation: down 150ms linear;
+  position: relative;
+  height: 300rpx;
+  /* border-top: 2px solid white; */
+  overflow: hidden;
+}
+ 
+.close{
+  animation: up 150ms linear;
+  position: relative;
+  height: 0rpx;
+  overflow: hidden;
+}
+ 
+.hide{
+  display: none;
+}
+ 
+.show{
+  display: block;
 }
 
-.charge {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30rpx;
-  line-height: 30rpx;
-  border: 1px solid rgb(233, 230, 230);
-  width: 90%;
+@keyframes down{
+  from{height: 20rpx;}
+  25% {height: 100rpx;}
+  50% {height: 150rpx;}
+  75% {height: 200rpx;}
+  to  {height: 280rpx;}
+}
+@keyframes up{
+  from{height: 300rpx;}
+  25% {height: 200rpx;}
+  50% {height: 150rpx;}
+  75% {height: 100rpx;}
+  to  {height: 0rpx;}
 }
 
-.charge-detail{
-  height: 210rpx
-}
-
-.charge-information {
-  display: flex;
-  flex-direction: row;
-  font-size: 50rpx;
-  color: green;
-  height: 150rpx;
-  align-items: center;
-  background-color: rgb(233, 230, 230);
+.bgimg1{
+  height: 300rpx;
   width: 100%;
+  border-radius: 10rpx;
 }
+
+.detail{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  line-height: 20rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
 
 .record{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-left: 5%;
+  margin-bottom: 10rpx;
+}
+.charge{
+  margin-bottom: 10rpx;
 }
 
-
-Page{
-  display: flex;
-  flex-flow: column wrap;
-}

@@ -1,13 +1,16 @@
+<view>个人账单</view>
 <block wx:for="{{ bill }}" wx:key="*this" wx:for-index="num" wx:for-item="A_bill">
 <view class='record'>
   <view class='reduce' wx:if="{{ A_bill.length == 6 }}">
-    <view class='information'>
-      <view class='timecontent'>{{ A_bill[0] }}</view>
-      <view class='reducecontent'>{{ A_bill[3] }}</view>
+    <view class='information' bindtap='show_or_hide' data-num='{{ num }}'>
+      <image class="bgimg0" src="../../image/2-1.png"></image>
+      <view class='timecontent'>{{ num+1 }}:{{ A_bill[0] }}</view>
+      <view class='reducecontent'>-{{ A_bill[3] }}元</view>
     </view>
-    <view class='reduce-detail'>
+    <view class="{{first_click[num]?'show':'hide'}} {{state[num]?'open':'close'}}">
+      <image class="bgimg1" src="../../image/2-2.png"></image>
       <text class='detail'>
-    停车结束时间：{{ A_bill[0] }}\n
+    交易时间：{{ A_bill[0] }}\n
     充电计费：{{ A_bill[1] }}\n
     停车计费：{{ A_bill[2] }}\n
     总价格：{{ A_bill[3] }}\n
@@ -18,11 +21,13 @@
   </view>
 
   <view class='charge' wx:if="{{ A_bill.length == 3 }}">
-    <view class='charge-information'>
+    <view class='information' bindtap='show_or_hide' data-num='{{ num }}'>
+      <image class='bgimg0' src="../../image/1-1.png"></image>
       <view class='timecontent'>{{ A_bill[0] }}</view>
-      <view class='reducecontent'>{{ A_bill[1] }}</view>
+      <view class='reducecontent'>+{{ A_bill[1] }}元</view>
     </view>
-    <view class='charge-detail'>
+    <view class="{{first_click[num]?'show':'hide'}} {{state[num]?'open':'close'}}">
+      <image class="bgimg1" src="../../image/1-2.png"></image>
       <text class='detail'>
     充值时间：{{ A_bill[0] }}\n
     充值金额：{{ A_bill[1] }}\n

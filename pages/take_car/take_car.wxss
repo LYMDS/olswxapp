@@ -26,6 +26,8 @@
 .car_num{
   position: absolute;
   top: 45%;
+  background-color: rgb(0, 0, 143);
+  color: white;
 }
 
 
