@@ -13,12 +13,6 @@
   /* 一条记录的第一行，简要行 */
 }
 
-.information:active{
-  position: relative;
-  height: 100rpx;
-  background-color: black;
-}
-
 .bgimg0{
   height: 100rpx;
   width: 100%;
@@ -61,15 +55,16 @@
   height: 0rpx;
   overflow: hidden;
 }
- 
+
+ /* -------------------------------------- */
 .hide{
   display: none;
 }
- 
+            /* 无需更改 */
 .show{
   display: block;
 }
-
+/* -------------------------------------- */
 @keyframes down{
   from{height: 20rpx;}
   25% {height: 100rpx;}
@@ -85,6 +80,7 @@
   to  {height: 0rpx;}
 }
 
+
 .bgimg1{
   height: 300rpx;
   width: 100%;
@@ -95,11 +91,10 @@
   position: absolute;
   top: 0%;
   left: 0%;
-  line-height: 20rpx;
+  line-height: 25rpx;
   color: white;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
-
 
 .record{
   margin-bottom: 10rpx;
@@ -108,3 +103,57 @@
   margin-bottom: 10rpx;
 }
 
+/* --------------------------------------------------------------------------- */
+
+.open0{
+  animation: down0 150ms linear;
+  position: relative;
+  height: 200rpx;
+  /* border-top: 2px solid white; */
+  overflow: hidden;
+}
+.close0{
+  animation: up0 150ms linear;
+  position: relative;
+  height: 0rpx;
+  overflow: hidden;
+}
+ 
+@keyframes down0{
+  from{height: 10rpx;}
+  25% {height: 55rpx;}
+  50% {height: 100rpx;}
+  75% {height: 145rpx;}
+  to  {height: 190rpx;}
+}
+@keyframes up0{
+  from{height: 200rpx;}
+  25% {height: 160rpx;}
+  50% {height: 120rpx;}
+  75% {height: 80rpx;}
+  to  {height: 0rpx;}
+}
+
+.bgimg10{
+  height: 200rpx;
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.detail0{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  line-height: 25rpx;
+  color: white;
+  font-size: 35rpx;
+}
+
+/* 
+修改下拉动画的长度，必须一整套的参数进行修改
+open0{height/animation高度与关键帧名称}
+close0{animation}
+@keyframes down0与up0 具体修改对应的帧高度
+bgimg10{height图片高度}
+detail0{left/top}
+*/
