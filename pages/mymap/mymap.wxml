@@ -1,4 +1,4 @@
-<map class='mapside' longitude="{{longitude}}" latitude="{{latitude}}" scale="28" markers="{{ markers }}" show-location = "true" bindmarkertap="map_init">
+<map class='mapside' longitude="{{longitude}}" latitude="{{latitude}}" scale="28" markers="{{ markers }}" show-location = "true" bindmarkertap="show_garage">
 
 <cover-image src='../../image/tip.png' class='icontip' bindtap='to_tip'></cover-image>
 <cover-image src='../../image/fix.png' class='iconfix' bindtap='to_except'></cover-image>

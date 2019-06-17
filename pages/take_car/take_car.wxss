@@ -8,6 +8,9 @@
   font-size: 20rpx;
   color: black;
 }
+.car_box:hover{
+  background-color: aquamarine;
+}
 
 
 .garage_frame{
@@ -18,7 +21,7 @@
 
 .car{
   position: absolute;
-  bottom: 10%;
+  bottom: 3%;
   height: 30%;
   width: 60%;
 }
@@ -33,10 +36,10 @@
 
 .battery{
   position: absolute;
-  left: 8%;
-  top: 20%;
-  width: 10%;
-  height: 15%;
+  left: 0%;
+  bottom: 8%;
+  width: 15%;
+  height: 25%;
 }
 
 .car_side{
@@ -121,12 +124,20 @@
   margin-top: 900rpx;
 }
 /*-------------------------------------------------------*/
-button{
+
+
+.bottombox{
   width: 100%;
   height: 90rpx;
   position: absolute;
   bottom: 0rpx;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
 }
+
 
 page{
   position: static;
@@ -150,12 +161,12 @@ page{
 .dashed {
   border-left-style: dashed;
   border-left-color: grey;
-  border-left-width: 3px;
+  border-left-width: 1px;
   width: 140rpx;
   height: 180rpx;
   border-right-style: dashed;
   border-right-color: grey;
-  border-right-width: 3px;
+  border-right-width: 1px;
 }
 #solid0{
   margin-left: 5%;

@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/record/record",
     "pages/mymap/mymap",
+    "pages/map/map",
+    "pages/record/record",
     "pages/take_car/take_car",
     "pages/charge/charge",
     "pages/index/index",
@@ -10,8 +11,7 @@
     "pages/user_except/user_except",
     "pages/bill/bill",
     "pages/login/login",
-    "pages/map1/map1",
-    "pages/map/map"
+    "pages/map1/map1"
   ],
   "window": {
     "backgroundTextStyle": "light",

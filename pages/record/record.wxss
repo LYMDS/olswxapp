@@ -22,14 +22,14 @@
 .timecontent{
   position: absolute;
   top: 25rpx;
-  left: 20rpx;
+  left: 100rpx;
   color: white;
 }
 
 .reducecontent{
   position: absolute;
   top: 25rpx;
-  right: 20rpx;
+  right: 30rpx;
   color: white;
 }
 
@@ -44,7 +44,7 @@
 .open{
   animation: down 150ms linear;
   position: relative;
-  height: 300rpx;
+  height: 340rpx;
   /* border-top: 2px solid white; */
   overflow: hidden;
 }
@@ -66,31 +66,31 @@
 }
 /* -------------------------------------- */
 @keyframes down{
-  from{height: 20rpx;}
-  25% {height: 100rpx;}
-  50% {height: 150rpx;}
-  75% {height: 200rpx;}
-  to  {height: 280rpx;}
+  from{height: 10rpx;}
+  25% {height: 95rpx;}
+  50% {height: 180rpx;}
+  75% {height: 265rpx;}
+  to  {height: 330rpx;}
 }
 @keyframes up{
-  from{height: 300rpx;}
-  25% {height: 200rpx;}
-  50% {height: 150rpx;}
-  75% {height: 100rpx;}
+  from{height: 340rpx;}
+  25% {height: 270rpx;}
+  50% {height: 180rpx;}
+  75% {height: 90rpx;}
   to  {height: 0rpx;}
 }
 
 
 .bgimg1{
-  height: 300rpx;
+  height: 340rpx;
   width: 100%;
   border-radius: 10rpx;
 }
 
 .detail{
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 10rpx;
+  left: 100rpx;
   line-height: 25rpx;
   color: white;
   font-size: 35rpx;
@@ -142,8 +142,8 @@
 
 .detail0{
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 10rpx;
+  left: 100rpx;
   line-height: 25rpx;
   color: white;
   font-size: 35rpx;

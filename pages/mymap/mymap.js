@@ -45,6 +45,7 @@ Page({
             height: 38,
             name: info[i].garage_name,
             address:info[i].address,
+            code: info[i].garage_code,
             callout: {
               content: info[i].garage_name + '/空位:' + info[i].empty,
               display: 'BYCLICK',
@@ -60,23 +61,57 @@ Page({
         
       }
     });
+    that.side();
 
   },
 
-  map_init :function(e){
-    var x = this.data.markers[e.markerId].latitude
-    var y = this.data.markers[e.markerId].longitude
-    var garage_name = this.data.markers[e.markerId].name
-    var addr = this.data.markers[e.markerId].address
-    wx.openLocation({
-      latitude: x,
-      longitude: y,
-      scale: 14,
-      name: garage_name, //打开后显示的地址名称
-      address: addr,
-    })
-    
+  
+
+
+  show_garage: function(e){
+    var that = this
+    var x = that.data.markers[e.markerId].latitude;
+    var y = that.data.markers[e.markerId].longitude;
+    var garage_name = that.data.markers[e.markerId].name;
+    var addr = that.data.markers[e.markerId].address;
+    var code = that.data.markers[e.markerId].code;
+    app.globalData.x = x;
+    app.globalData.y = y;
+    app.globalData.garage_name = garage_name;
+    app.globalData.addr = addr;
+    const to_side = String(that.data.markers[e.markerId].latitude) + ',' + String(that.data.markers[e.markerId].longitude);
+    var from_side = that.side()
+    console.log(to_side)
+    console.log(from_side)
+    qqmapsdk.calculateDistance({
+      //mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行），不填默认：'walking',可不填
+      //from参数不填默认当前地址
+      //获取表单提交的经纬度并设置from和to参数（示例为string格式）
+      from: from_side,
+      to: to_side, //终点坐标
+      success: function (res) {
+        console.log(res.result.elements[0].distance);
+        const less_distance = 60     //至少距离车库60米
+        if (res.result.elements[0].distance <= less_distance) {
+          app.globalData.distance = true;
+        } else {
+          app.globalData.distance = false;
+        };
+        app.globalData.garage_code = code;
+        wx.navigateTo({
+          url: '../take_car/take_car',
+        });
+      },
+      fail: function (error) {
+        console.error(error);
+      },
+      complete: function (res) {
+        console.log(res);
+      }
+    });
   },
+
+
 
   go_control: function(e){
     console.log(e.controlId)
@@ -90,10 +125,40 @@ Page({
       success: function(res) {
         const code = res.path.slice(res.path.indexOf('=')+1)
         console.log(code)
-        app.globalData.garage_code = code
-        wx.navigateTo({
-          url: '../take_car/take_car',
-        })
+        //检查扫码距离
+        const from_side = that.side();
+        console.log(from_side);
+        var which = 0;
+        while(that.data.markers[which].code != code){which++}
+        const to_side = String(that.data.markers[which].latitude) + ',' + String(that.data.markers[which].longitude);
+        console.log(to_side, that.data.markers[which].code);
+        qqmapsdk.calculateDistance({
+          //mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行），不填默认：'walking',可不填
+          //from参数不填默认当前地址
+          //获取表单提交的经纬度并设置from和to参数（示例为string格式）
+          from: from_side,
+          to: to_side, //终点坐标
+          success: function (res) {
+            console.log(res.result.elements[0].distance);
+            const less_distance = 60     //至少距离车库60米
+            if (res.result.elements[0].distance <= less_distance){
+              app.globalData.distance = true;
+            }else{
+              app.globalData.distance = false;
+            };
+            app.globalData.garage_code = code;
+            wx.navigateTo({
+              url: '../take_car/take_car',
+            });
+          },
+          fail: function (error) {
+            console.error(error);
+          },
+          complete: function (res) {
+            console.log(res);
+          }
+        });
+        
       },
       fail: function(res) {},
       complete: function(res) {},
@@ -111,6 +176,21 @@ Page({
         })
       },
     })
+  },
+
+  side: function () {
+    var that = this
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        that.setData({
+          latitude0: res.latitude,
+          longitude0: res.longitude
+        })
+
+      },
+    })
+    return String(that.data.latitude0) + ',' + String(that.data.longitude0)
   },
 
 

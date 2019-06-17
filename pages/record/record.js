@@ -6,8 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    state: [false, false, false, false, false, false, false,],
-    first_click: [false, false, false, false, false, false, false,], 
+    
   },
 
   /**
@@ -25,13 +24,15 @@ Page({
           var bill = res.data.all
           console.log(res);
           for (let i = 0; i < bill.length; i++) {
-            bill[i][0] = bill[i][0].replace("T", " ")
+            bill[i][0] = bill[i][0].replace("T", " ");
+            bill[i][0] = bill[i][0].slice(0,bill[i][0].lastIndexOf(":"));
           };
-          // var status = new Array(bill.length).fill(false);
+
+          var status = new Array(bill.length).fill(false);
           that.setData({
             bill: res.data.all,
-            // state: status,
-            // first_click: status
+            state: status,
+            first_click: status
           });
         }
       }
