@@ -1,4 +1,4 @@
-<view id="side15" class="car_box" wx:if="{{ gar_data[15].length > 1 }}" bindtap="choice" data-num="{{ gar_data[15][0] }}">
+<view id="side15" class="car_box" wx:if="{{ gar_data[15].length > 1 }}" bindtap="choice" data-num="{{ gar_data[15][0] }}" data->
   <image class="garage_frame" src="../../img/11.png"></image>
   <image wx:if="{{ gar_data[15][1] }}" class="car" src="../../img/10.png"></image>
   <text class="car_num">{{ gar_data[15][4] }}</text>

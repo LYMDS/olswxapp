@@ -24,19 +24,19 @@
 
 <view id='type_box'>
 
-  <view class='type' hover='true' style="background-color:{{ color1 }}" bindtap='type' data-value='1#'>
+  <view class='type' hover='true' bindtap='type' data-value='1#'>
     <view>
       库机故障
     </view>
   </view>
 
-  <view class='type' hover='true' style="background-color:{{ color2 }}" bindtap='type' data-value='2#'>
+  <view class='type' hover='true' bindtap='type' data-value='2#'>
     <view>
       车辆损伤
     </view>
   </view>
 
-  <view class='type' hover='true' style="background-color:{{ color3 }}" bindtap='type' data-value='3#'>
+  <view class='type' hover='true' bindtap='type' data-value='3#'>
     <view>
       其他
     </view>
@@ -53,9 +53,7 @@
 <textarea id='except_text' placeholder='请输入文本' maxlength='200' bindinput='input2'></textarea>
 
 <view id='choose_photo' bindtap='choose'>
-  <view>
-    照片
-  </view>
+  <icon class="iconfont icon-xiangji"></icon>
 </view>
 
 <view id='img_box'>

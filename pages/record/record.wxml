@@ -1,4 +1,3 @@
-<view>个人账单</view>
 <block wx:for="{{ bill }}" wx:key="*this" wx:for-index="num" wx:for-item="A_bill">
 <view class='record'>
   <view class='reduce' wx:if="{{ A_bill.length == 6 }}">

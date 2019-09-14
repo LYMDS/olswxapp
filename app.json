@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/mymap/mymap",
+    "pages/show_car/show_car",
     "pages/map/map",
     "pages/record/record",
     "pages/take_car/take_car",

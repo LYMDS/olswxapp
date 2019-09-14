@@ -1,0 +1,29 @@
+<view id='gar_box'>
+  <block wx:for="{{ gar_data }}" wx:key="*this" wx:for-index="row_num" wx:for-item="row_data">
+    <view class='row_box'>
+      <block wx:for="{{ row_data }}" wx:key="*this" wx:for-index="column_num" wx:for-item="side_data">
+        <view class='side_box' bindtap="choice" data-num="{{ side_data[0] }}" style="pointer-events:{{ side_data.length == 5&&side_data[1]?'auto':'none' }}">
+          <block wx:if="{{ side_data.length == 5 }}">
+            <image class="garage_frame" src="../../img/11.png"></image>
+            <image class="car" wx:if="{{ side_data[1] }}" src="../../img/10.png"></image>
+            <text class="car_num" wx:if="{{ side_data[1] }}">{{ side_data[4] }}</text>
+            <image class="battery" wx:if="{{ side_data[1] && side_data[2] == 2 }}" src="../../img/charge.png"></image>
+            <text class="car_side">{{ side_data[0] }}号</text>
+          </block>
+          <block wx:elif="{{ side_data == 1 }}">
+            <view class='solid'><view class='dashed'></view></view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>
+
+
+<view class='bottombox' wx:if="{{ distance == true }}">
+  <view>取车</view>
+</view>
+<view class='bottombox' wx:else bindtap='go_map'>
+  <view>到该车库去</view>
+</view>
+

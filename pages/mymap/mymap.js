@@ -19,9 +19,9 @@ Page({
     var stu = wx.getStorageSync("login_state")
     var user = wx.getStorageSync("user_num")
     if (stu == null || stu == false || user == null) {
-      wx.redirectTo({
-        url: '../login/login'
-      })
+      // wx.redirectTo({
+      //   url: '../login/login'
+      // })
     }
     else { console.log("在index页面加载时登录成功") }
 
@@ -99,7 +99,7 @@ Page({
         };
         app.globalData.garage_code = code;
         wx.navigateTo({
-          url: '../take_car/take_car',
+          url: '../show_car/show_car',
         });
       },
       fail: function (error) {
@@ -132,6 +132,14 @@ Page({
         while(that.data.markers[which].code != code){which++}
         const to_side = String(that.data.markers[which].latitude) + ',' + String(that.data.markers[which].longitude);
         console.log(to_side, that.data.markers[which].code);
+        var x = that.data.markers[which].latitude;
+        var y = that.data.markers[which].longitude;
+        var garage_name = that.data.markers[which].name;
+        var addr = that.data.markers[which].address;
+        app.globalData.x = x;
+        app.globalData.y = y;
+        app.globalData.garage_name = garage_name;
+        app.globalData.addr = addr;
         qqmapsdk.calculateDistance({
           //mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行），不填默认：'walking',可不填
           //from参数不填默认当前地址
@@ -148,7 +156,7 @@ Page({
             };
             app.globalData.garage_code = code;
             wx.navigateTo({
-              url: '../take_car/take_car',
+              url: '../show_car/show_car',
             });
           },
           fail: function (error) {

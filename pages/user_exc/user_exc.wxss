@@ -1,5 +1,36 @@
 @import "../../iconfont.wxss";
 
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1165653_lpq5zdduwmn.eot?t=1560756463148'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1165653_lpq5zdduwmn.eot?t=1560756463148#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_1165653_lpq5zdduwmn.woff?t=1560756463148') format('woff'),
+  url('//at.alicdn.com/t/font_1165653_lpq5zdduwmn.ttf?t=1560756463148') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1165653_lpq5zdduwmn.svg?t=1560756463148#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 80rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiangji:before {
+  content: "\e723";
+}
+
+.icon-camera:before {
+  content: "\e619";
+}
+
+.icon-che:before {
+  content: "\e601";
+}
+
+
+
 page{
   display: flex;
   flex-direction: column;
@@ -14,6 +45,10 @@ page{
   align-items: center;
   border-radius: 50%;
   font-size: 30rpx;
+  background-color: rgb(174, 212, 212);
+}
+.type:hover{
+  background-color: rgb(87, 139, 87);
 }
 
 
@@ -38,7 +73,6 @@ page{
   justify-content: flex-start;
   align-items: center;
   margin-top: 20rpx;
-
 }
 
 
@@ -78,7 +112,7 @@ page{
 }
 
 #except_text{
-  background-color: rgba(0, 0, 0, 0.322);
+  background-color: rgba(0, 0, 0, 0.1);
   margin-left: 5%;
   width: 82%;
   height: 200rpx;
@@ -89,10 +123,9 @@ page{
 }
 
 #choose_photo{
-  background-color: #aaa;
-  height: 150rpx;
+  height:150rpx;
   width: 150rpx;
-  margin-top: 30rpx;
+  
   margin-left: 5%;
   display: flex;
   justify-content: center;
@@ -108,8 +141,8 @@ page{
 }
 
 .readypost{
-  height:80rpx;
-  width:80rpx;
+  height:100rpx;
+  width:100rpx;
 }
 
 #img_box{

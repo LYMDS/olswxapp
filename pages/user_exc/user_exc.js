@@ -6,9 +6,6 @@ Page({
     garage_code: "",
     type: "",
     report: "",
-    color1: "gray",
-    color2: "gray",
-    color3: "gray",
     gar_num: "",
   },
 
@@ -16,13 +13,15 @@ Page({
   type: function(res){
     const which = res.currentTarget.dataset.value;
     switch(which){
-      case '1#': this.setData({ color1: "green", color2: "gray", color3: "gray", type: which}); break;
-      case '2#': this.setData({ color1: "gray", color2: "green", color3: "gray", type: which}); break;
-      case '3#': this.setData({ color1: "gray", color2: "gray", color3: "green", type: which}); break;
+      case '1#': this.setData({type: which}); break;
+      case '2#': this.setData({type: which}); break;
+      case '3#': this.setData({type: which}); break;
     };
   },
 
   sendform: function () {
+    //设置提示拦截
+    console.log()
     var that = this
     var nowtime = util.formatTime(new Date())
     console.log(nowtime)
@@ -116,11 +115,16 @@ Page({
   },
   
   scan_code: function () {
+    var that = this;
     wx.scanCode({
       onlyFromCamera: true,
       scanType: ['barCode', 'qrCode'],
       success: function (res) {
-        console.log(res)
+        const code = res.path.slice(res.path.indexOf('=') + 1)
+        that.setData({
+          garage_code: code,
+          gar_num: code
+        })
         //处理res数据即可
       },
       fail: function (res) { },

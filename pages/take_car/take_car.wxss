@@ -137,6 +137,9 @@
   align-items: center;
   color: gray;
 }
+.bottombox:active{
+  background-color: rgb(97, 192, 160);
+}
 
 
 page{

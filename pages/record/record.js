@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    //first_click: [false, false, false, false, false, false, false, false],
+    //state: [false, false, false, false, false, false, false, false]
+    first_click: null,
+    state: null
   },
 
   /**
@@ -29,10 +32,11 @@ Page({
           };
 
           var status = new Array(bill.length).fill(false);
+          //var status = [false, false, false, false, false, false, false, false];
           that.setData({
             bill: res.data.all,
             state: status,
-            first_click: status
+            first_click: status,
           });
         }
       }
@@ -43,31 +47,16 @@ Page({
   show_or_hide: function(res){
     var that = this;
     // console.log(res);
-    const num = parseInt(res.currentTarget.dataset.num);
+    var num = parseInt(res.currentTarget.dataset.num);
     // console.log(num);
 
-    var list_state = that.data.state;
-    var first_state = that.data.first_click;
-    if (!first_state[num]) {
-      first_state[num] = true;
-      that.setData({
-        first_click: first_state
-      });
-    }
-    if (list_state[num]) {
-      list_state[num] = false;
-      that.setData({
-        state: list_state
-      });
-    } else {
-      list_state[num] = true;
-      that.setData({
-        state: list_state
-      });
-    }
-
-    
-
+    var no_state = !that.data.state[num];
+    var index = "first_click[" + num + "]";
+    var index1 = "state[" + num + "]";
+    that.setData({
+      [index]: true,
+      [index1]: no_state
+    })  
   },
 
   /**

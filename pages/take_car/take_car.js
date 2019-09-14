@@ -27,10 +27,13 @@ Page({
 
   },
   choice: function(res){
+    var that = this;
     console.log(res);
     console.log(res.currentTarget.dataset.num);
+    that.data.gar_data
+    if (res.currentTarget.dataset.num){}
     this.setData({
-      
+      choose_car: res.currentTarget.dataset.num
     })
   },
   go_map: function () {
@@ -46,8 +49,4 @@ Page({
       address: addr,
     })
   },
-
-
-
-
 })
